@@ -4,8 +4,6 @@ import Image from 'next/image';
 import helper from '@utils/helper';
 import _ from 'lodash';
 import { useEffect, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
 
 export default function Resume() {
   const [isVisible, setIsVisible] = useState(false);
