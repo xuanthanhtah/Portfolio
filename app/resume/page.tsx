@@ -4,6 +4,7 @@ import Image from 'next/image';
 import helper from '@utils/helper';
 import _ from 'lodash';
 import { useEffect, useState } from 'react';
+import TypingText from '../components/TypingTextProps';
 
 export default function Resume() {
   const [isVisible, setIsVisible] = useState(false);
@@ -50,20 +51,44 @@ export default function Resume() {
   };
 
   return (
-    <>
+    <div className="relative">
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-10 right-10 p-3 bg-[#608AF5] text-white rounded-[10%] shadow-lg transition-transform transform hover:scale-110 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="hover:animate-[bounce_1.1s_ease-in-out_infinite] z-10 fixed bottom-10 right-10 p-3 bg-[#608AF5] text-white rounded-[10%] shadow-lg transition-transform transform hover:scale-110 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-white"
         >
           ↑
         </button>
       )}
+      {/* Backgroud */}
+      <div className="absolute top-[80px] left-[345px]">
+        <Image src="/assets/image/bg1.svg" width={200} height={190} alt="" />
+      </div>
+      <div className="absolute top-[444px] left-[545px]">
+        <Image src="/assets/image/bg1.svg" width={150} height={140} alt="" />
+      </div>
+      <div className="absolute top-[630px] left-[280px] z-0">
+        <Image src="/assets/image/bg1.svg" width={300} height={290} alt="" />
+      </div>
+      <div className="absolute top-[1000px] left-[980px] z-0">
+        <Image src="/assets/image/bg2.svg" width={300} height={290} alt="" />
+      </div>
+      <div className="absolute top-[1270px] left-[220px] z-0">
+        <Image src="/assets/image/bg2.svg" width={300} height={290} alt="" />
+      </div>
+      <div className="absolute top-[1570px] left-[1240px] z-0">
+        <Image src="/assets/image/bg2.svg" width={300} height={290} alt="" />
+      </div>
       <div className="bg-white w-full h-full mx-auto">
         {/* Header */}
         <div className="pt-14 sticky top-0 z-40 bg-white">
           <div className="px-80 flex items-center">
-            <div className="flex items-center gap-2.5 relative flex-1 grow">
+            <div
+              onClick={() => {
+                scrollTopassionsPassion('#');
+              }}
+              className="cursor-pointer flex items-center gap-2.5 relative flex-1 grow"
+            >
               <p className="relative  mt-[-1.00px] [font-family:'Poppins-Bold',Helvetica] font-normal text-transparent text-[25px] text-center tracking-[5.12px] leading-[normal]">
                 <span className="font-bold text-[#002264] tracking-[1.28px]">
                   XUAN
@@ -73,6 +98,10 @@ export default function Resume() {
                 </span>
               </p>
             </div>
+            {/* <div className="block lg:hidden">
+              <img src="/assets/image/baque.svg" />
+            </div> */}
+            {/* <div className="hidden lg:block"></div> */}
             <div className="inline-flex items-center gap-[45px] relative flex-[0_0_auto]">
               <div className="inline-flex items-start gap-[45px] relative flex-[0_0_auto]">
                 <div
@@ -115,23 +144,24 @@ export default function Resume() {
         </div>
 
         {/* Profile */}
-        <div className="pt-16 flex px-80" id="profile">
+        <div className="pt-16 flex px-80 h-[560px]" id="profile">
           <div className="w-6/12">
-            <p className="text-[#002265] font-poppins text-[35px] font-normal leading-normal tracking-[0.175px]">
-              Hi !
-            </p>
-            <p className="text-[#002265] font-poppins text-[50px] font-semibold leading-normal tracking-[0.25px] pb-8">
-              I’m Thanh Le Xuan,
-              <br />
-              Front-End Developer
-            </p>
-            <p className="text-[#082032] font-poppins text-[23px] font-normal leading-normal tracking-[0.345px]">
-              I am from Ho Chi Minh City, Vietnam
-              <br />
-              Always learning new technologies
-            </p>
+            <TypingText
+              text="Hi !"
+              className="text-[#002265] font-poppins text-[35px] font-normal leading-normal tracking-[0.175px] "
+            />
+            <br />
+            <TypingText
+              text="I’m Thanh Le Xuan,<br /> Front-End Developer"
+              className="text-[#002265] font-poppins text-[50px] font-semibold leading-normal tracking-[0.25px] pb-8"
+            />
+            <br />
+            <TypingText
+              text=" I am from Ho Chi Minh City, Vietnam <br /> Always learning new technologies"
+              className="text-[#082032] font-poppins text-[23px] font-normal leading-normal tracking-[0.345px]"
+            />
           </div>
-          <div className="w-6/12 relative">
+          <div className="w-6/12 relative animate-fade-in-right">
             <div className="absolute right-0">
               <Image
                 src={'/assets/image/person.svg'}
@@ -143,7 +173,7 @@ export default function Resume() {
           </div>
         </div>
         {/*Additional passions */}
-        <div className="pt-[225px] px-80" id="passions">
+        <div className=" px-80" id="passions">
           <div className="font-poppins w-full text-center text-[35px] leading-[normal] tracking-[0.96px] pb-[60px]">
             <span className="text-center text-indigo-800">{'Additional '}</span>
             <span className="text-center font-semibold text-blue-950">
@@ -151,7 +181,7 @@ export default function Resume() {
             </span>
           </div>
           <div className="flex justify-between">
-            <div className="w-[347px] h-[280px] flex-shrink-0 rounded-[13px] bg-white shadow-[0px_5px_26px_5px_rgba(0,_0,_0,_0.17)]">
+            <div className="z-10 w-[347px] h-[280px] flex-shrink-0 rounded-[13px] bg-white shadow-[0px_5px_26px_5px_rgba(0,_0,_0,_0.17)]">
               <div className="px-[61px] py-5">
                 <Image
                   src={'/assets/image/fe.svg'}
@@ -173,7 +203,7 @@ export default function Resume() {
                 </span>
               </div>
             </div>
-            <div className="w-[347px] h-[280px] flex-shrink-0 rounded-[13px] bg-white shadow-[0px_5px_26px_5px_rgba(0,_0,_0,_0.17)]">
+            <div className="z-10 w-[347px] h-[280px] flex-shrink-0 rounded-[13px] bg-white shadow-[0px_5px_26px_5px_rgba(0,_0,_0,_0.17)]">
               <div className="px-[61px] py-5">
                 <Image
                   src={'/assets/image/be.svg'}
@@ -195,7 +225,7 @@ export default function Resume() {
                 </span>
               </div>
             </div>
-            <div className="w-[347px] h-[280px] flex-shrink-0 rounded-[13px] bg-white shadow-[0px_5px_26px_5px_rgba(0,_0,_0,_0.17)]">
+            <div className="z-10 w-[347px] h-[280px] flex-shrink-0 rounded-[13px] bg-white shadow-[0px_5px_26px_5px_rgba(0,_0,_0,_0.17)]">
               <div className="px-[61px] py-5">
                 <Image
                   src={'/assets/image/uiux.svg'}
@@ -422,13 +452,16 @@ export default function Resume() {
             </div>
           </div>
         </div>
-        {/* footer */}
-        <div className="flex flex-col pt-[75px]">
-          <p className="w-full text-center my-12 text-gray-600">
-            Copyright © 2024 Design By Rauliqbal
-          </p>
-        </div>
       </div>
-    </>
+      {/* footer */}
+      <div className="flex flex-col bg-white">
+        <div className="relative">
+          <img src="/assets/image/footer.svg" />
+        </div>
+        <p className="text-white text-center font-poppins text-[35px] font-normal leading-normal tracking-[1.925px] absolute bottom-4 left-[30%]">
+          Copyright © 2024 Design By Rauliqbal
+        </p>
+      </div>
+    </div>
   );
 }
