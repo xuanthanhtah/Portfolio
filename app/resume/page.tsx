@@ -188,7 +188,7 @@ export default function Resume() {
               <nav className="flex flex-col lg:flex-row items-start gap-[20px] lg:gap-[45px] p-4 lg:p-0">
                 {[
                   { id: '#', text: 'About' },
-                  { id: '#passions', text: 'Passions' },
+                  { id: '#programming', text: 'Technology' },
                   { id: '#timeline', text: 'Time Line' },
                   ...(isMobileMenuOpen
                     ? [{ id: '#contact', text: 'Contact Me' }]
@@ -253,12 +253,14 @@ export default function Resume() {
         {/*Additional passions */}
         <div
           className="px-4 md:px-10 lg:px-20 xl:px-80 pt-[80px] md:pt-[120px] lg:pt-[170px]"
-          id="passions"
+          id="programming"
         >
           <div className="font-poppins w-full text-center text-[25px] md:text-[30px] lg:text-[35px] leading-[normal] tracking-[0.7px] md:tracking-[0.8px] lg:tracking-[0.96px] pb-[30px] md:pb-[45px] lg:pb-[60px]">
-            <span className="text-center text-indigo-800">{'Additional '}</span>
+            <span className="text-center text-indigo-800">
+              {'Programming '}
+            </span>
             <span className="text-center font-semibold text-blue-950">
-              passions
+              skills
             </span>
           </div>
           <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-4">
@@ -397,7 +399,7 @@ export default function Resume() {
         {/* Contact Me */}
 
         <div
-          className="pt-[100px] md:pt-[160px] lg:pt-[225px] px-4 md:px-10 lg:px-80"
+          className="pt-[100px] md:pt-[160px] lg:pt-[225px] px-4 md:px-10 lg:px-20 xl:px-80"
           id="contact"
         >
           <div className="font-poppins w-full text-center text-[25px] md:text-[30px] lg:text-[35px] leading-[normal] tracking-[0.7px] md:tracking-[0.8px] lg:tracking-[0.96px] pb-[30px] md:pb-[45px] lg:pb-[60px]">
@@ -426,7 +428,15 @@ export default function Resume() {
                 slidesPerView: 2,
                 spaceBetween: 20,
               },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 25,
+              },
               1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+              1280: {
                 slidesPerView: 4,
                 spaceBetween: 30,
               },
