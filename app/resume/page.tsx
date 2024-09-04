@@ -189,7 +189,7 @@ export default function Resume() {
                 {[
                   { id: '#', text: 'About' },
                   { id: '#passions', text: 'Passions' },
-                  { id: '#portfolio', text: 'Portfolio' },
+                  { id: '#timeline', text: 'Time Line' },
                   ...(isMobileMenuOpen
                     ? [{ id: '#contact', text: 'Contact Me' }]
                     : []),
@@ -296,7 +296,7 @@ export default function Resume() {
         </div>
         {/* Portfolio */}
         <div
-          className="pt-[100px] md:pt-[160px] lg:pt-[225px] px-4 md:px-10 lg:px-20 xl:px-80"
+          className="pt-[100px] md:pt-[160px] lg:pt-[225px] px-4 md:px-10 lg:px-20 xl:px-80 hidden"
           id="portfolio"
         >
           <div className="font-poppins w-full text-center text-[25px] md:text-[30px] lg:text-[35px] leading-[normal] tracking-[0.7px] md:tracking-[0.8px] lg:tracking-[0.96px] pb-[30px] md:pb-[45px] lg:pb-[60px]">
@@ -331,6 +331,67 @@ export default function Resume() {
                   </div>
                 ))
               : null}
+          </div>
+        </div>
+        {/* Time Line */}
+        <div
+          className="pt-[60px] sm:pt-[80px] md:pt-[100px] lg:pt-[160px] xl:pt-[225px] px-4 sm:px-6 md:px-8 lg:px-16 xl:px-80"
+          id="timeline"
+        >
+          <div className="font-poppins w-full text-center text-[20px] sm:text-[22px] md:text-[25px] lg:text-[30px] xl:text-[35px] leading-[normal] tracking-[0.5px] sm:tracking-[0.6px] md:tracking-[0.7px] lg:tracking-[0.8px] xl:tracking-[0.96px] pb-[20px] sm:pb-[25px] md:pb-[30px] lg:pb-[45px] xl:pb-[60px]">
+            <span className="text-center text-indigo-800">{'Time '}</span>
+            <span className="text-center font-semibold text-blue-950">
+              Line
+            </span>
+          </div>
+          <div>
+            <div className="w-full">
+              <div className="max-w-4xl mx-auto">
+                <section className="timeline">
+                  <h5 className="text-center text-base sm:text-lg font-normal text-gray-800 mb-4 sm:mb-6">
+                    Basic education
+                  </h5>
+
+                  <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 before:absolute before:left-1/2 before:-ml-px before:h-full before:w-0.5 before:bg-blue-200">
+                    <div className="sm:col-start-1 relative pr-4 sm:pr-8 md:pr-0 md:pl-8">
+                      <div className="bg-white p-4 sm:p-6 rounded shadow-md">
+                        <h3 className="text-base sm:text-lg font-semibold mb-2 text-blue-950">
+                          HUTECH University.
+                        </h3>
+                        <div className="absolute right-0 sm:right-auto sm:left-full w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white border-2 border-blue-200 -mr-1.5 sm:mr-0 sm:-ml-2 mt-2"></div>
+                        <span className="inline-block bg-[#608AF5] text-white text-xs px-2 py-1 rounded mb-2">
+                          2019 - 2023
+                        </span>
+                        <p className="text-xs sm:text-sm text-gray-600">
+                          Information Technology
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h5 className="text-center text-base sm:text-lg font-normal text-gray-800 my-4 sm:my-6">
+                    Work experience
+                  </h5>
+
+                  <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 before:absolute before:left-1/2 before:-ml-px before:h-full before:w-0.5 before:bg-blue-200">
+                    <div className="sm:col-start-2 relative pl-4 sm:pl-8 md:pl-0 md:pr-8">
+                      <div className="bg-white p-4 sm:p-6 rounded shadow-md">
+                        <h3 className="text-base sm:text-lg font-semibold mb-2 text-blue-950">
+                          HD BANK
+                        </h3>
+                        <div className="absolute left-0 sm:left-auto sm:right-full w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white border-2 border-blue-200 -ml-1.5 sm:ml-0 sm:-mr-2 mt-2"></div>
+                        <span className="inline-block bg-[#608AF5] text-white text-xs px-2 py-1 rounded mb-2">
+                          2023 - Now
+                        </span>
+                        <p className="text-xs sm:text-sm text-gray-600">
+                          Front-End Developer
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
           </div>
         </div>
         {/* Contact Me */}
@@ -417,7 +478,7 @@ export default function Resume() {
         <div className="relative">
           <img src="/assets/image/footer.svg" className="w-full" />
         </div>
-        <p className="text-white text-center font-poppins text-[12px] md:text-[20px] lg:text-[35px] font-normal leading-normal tracking-[0.88px] md:tracking-[1.1px] lg:tracking-[1.925px] absolute bottom-0 left-0 right-0">
+        <p className="text-white text-center font-poppins text-[12px] md:text-[20px] lg:text-[35px] font-normal leading-normal tracking-[0.88px] md:tracking-[1.1px] lg:tracking-[1.925px] absolute lg:bottom-2 bottom-0 left-0 right-0">
           Copyright © 2024 Design By Rauliqbal
         </p>
       </div>
